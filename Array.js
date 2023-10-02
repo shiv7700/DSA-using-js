@@ -297,6 +297,7 @@ function removeElement1(arr,element){
 const remove1 = removeElement1([4,1,2,4,3,4,5],4); 
 remove1;
 
+//correct way
 function removeElement(arr,element){
   const result = [];
   if(arr.includes(element)){

@@ -25,5 +25,5 @@ If you'd like to contribute, feel free to fork the repository and submit a pull 
 # Issues and Feedback
 If you find any issues with the solutions or have suggestions for improvements, please open an issue.
 
-# **Disclaimer**
+# Disclaimer
 This repository is intended for educational and practice purposes only. The solutions provided here may not be optimized for production use. It is recommended to thoroughly understand the underlying concepts and consider best practices before implementing them in a production environment.

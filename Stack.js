@@ -51,13 +51,4 @@ class Stack{
 
 }
 
-const stackOne = new Stack();
-stackOne.push(1);
-stackOne.push(1);
-stackOne.push(1);
-stackOne.push(12);
-console.log(stackOne.item);
-console.log(stackOne.isEmpty());
-console.log(stackOne.peek());
-console.log(stackOne.size());
-stackOne.print();
+

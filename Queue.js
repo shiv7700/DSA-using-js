@@ -43,12 +43,3 @@ class Queue{
     }
 }
 
-const queueOne = new Queue();
-queueOne.enqueue(1);
-queueOne.enqueue(2);
-queueOne.enqueue(3);
-queueOne.enqueue(4);
-queueOne.enqueue(5);
-queueOne.enqueue(6);
-queueOne.enqueue(7);
-console.log(queueOne.print());

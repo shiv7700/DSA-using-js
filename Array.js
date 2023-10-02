@@ -286,7 +286,7 @@ equal;
 // [1,2,3,4,5] => remove 2 => [1,3,4,5]
 // [1,2,3,4,5,2,2] => remove 2 => [1,3,4,5]
 
-//wrong way (delete array method leaves undefined in array)
+//wrong way (delete array method leaves undefined holes in array)
 function removeElement1(arr,element){
   for(let i=0; i<arr.length; i++){
     if(arr[i] === element) delete arr[i];

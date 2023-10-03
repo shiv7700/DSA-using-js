@@ -12,6 +12,9 @@
 // [1,2,3,4,5] 1 is rear , 5 is front
 
 // Implementation of stack
+// stack can be implemented through array or linklist 
+// below is stack implementation using arrays
+
 
 class Stack{
     constructor(){
@@ -80,3 +83,28 @@ oneStack.print();
 
 
 console.log(oneStack);
+
+// Question 1 : reverse order of word in a string
+// "hello world" => "world hello"
+// "a good  example" => "example good a"
+function reverseWord(str){
+    const split = str.split(" ");
+    const stack = [];
+    for(let i of split){
+        stack.push(i);
+    }
+
+    let finalStr = "";
+
+    while(str.length){
+        let current = stack.pop();
+        if(current){
+            finalStr += " " + current;
+        }
+    }
+    return finalStr.trim();
+}
+
+const one = reverseWord("hello world");
+console.log(one);
+

@@ -1,16 +1,22 @@
 // Stack
 //stack of plates at wedding
 //LIFO Principle of Stack
+//LIFO last in first out
 
-// Enqueue: Add an element to the end of the queue
-// Dequeue: Remove an element from the front of the queue
+// push: Add an element to the end of the queue
+// pop: Remove an element from the end of the queue
 // IsEmpty: Check if the queue is empty
 // IsFull: Check if the queue is full
 // Peek: Get the value of the front of the queue without removing it
 
+// [1,2,3,4,5] 1 is rear , 5 is front
+
+// Implementation of stack
+
 class Stack{
-    constructor(){
+    constructor(max){
         this.item = [];
+        this.item.length = max;
     }
 
     //push element into stack
@@ -28,7 +34,7 @@ class Stack{
 
     //isEmpty
     isEmpty(){
-        return this.item.length=== 0 ;
+        return (this.item.length=== 0) ? true : false ;
     }
 
     //peek
@@ -37,6 +43,11 @@ class Stack{
             return "stack is empty";
         }
         return this.item[this.item.length-1];
+    }
+
+    //isFull
+    isFull(){
+
     }
 
     //size
@@ -51,4 +62,27 @@ class Stack{
 
 }
 
+const oneStack = new Stack();
+oneStack.push(1);
+oneStack.push(2);
+oneStack.push(3);
+oneStack.push(4);
+oneStack.push(5);
+oneStack.push(6);
 
+oneStack.pop();
+oneStack.pop();
+oneStack.pop();
+oneStack.pop();
+oneStack.pop();
+oneStack.pop();
+console.log(oneStack.pop());
+
+console.log(oneStack.isEmpty());
+
+console.log(oneStack.size())
+
+oneStack.print();
+
+
+console.log(oneStack);

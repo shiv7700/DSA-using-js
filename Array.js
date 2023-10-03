@@ -313,5 +313,23 @@ function removeElement(arr, element) {
 const remove = removeElement([1, 2, 3, 4, 5], 3);
 console.log(remove);
 
+// Question 13 : merge two array into a new array
+function merge(arr1,arr2){
+  let result = [];
+  for(let i=0; i<arr1.length; i++){
+      result.push(arr1[i]);
+  }
+  
+  for(let i=0; i<arr2.length; i++){
+      result.push(arr2[i]);
+  }
+
+  return result;
+}
+
+const os = merge([1,2,3],[4,5,6]);
+console.log(os);
+
+
 // copy for questions
 //Question 12 : count how many times every element in array occurs

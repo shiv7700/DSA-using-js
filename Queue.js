@@ -1,6 +1,8 @@
 // Queue
 //FIFO Principle of queue
 
+//There are three types of queues known as circular, double-ended, and priority.
+
 class Queue{
     constructor(){
         this.items = [];

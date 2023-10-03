@@ -281,7 +281,7 @@ function equalArray(arr1, arr2) {
 const equal = equalArray([10, 20, 30, 40], [10, 20, 30, 50]);
 console.log(equal)
 
-//Question 12 : remove element from array at specific index
+//Question 15 : remove element from array at specific index
 //also all occurance of that element
 // [1,2,3,4,5] => remove 2 => [1,3,4,5]
 // [1,2,3,4,5,2,2] => remove 2 => [1,3,4,5]
@@ -313,7 +313,10 @@ function removeElement(arr, element) {
 const remove = removeElement([1, 2, 3, 4, 5], 3);
 console.log(remove);
 
-// Question 13 : merge two array into a new array
+// Question 16 : merge two array into a new array
+// [1,2,3,4] 
+// [6,7,8,9]
+// => [1,2,3,4,6,7,8,9]
 function merge(arr1,arr2){
   let result = [];
   for(let i=0; i<arr1.length; i++){

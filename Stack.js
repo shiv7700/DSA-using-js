@@ -14,9 +14,8 @@
 // Implementation of stack
 
 class Stack{
-    constructor(max){
+    constructor(){
         this.item = [];
-        this.item.length = max;
     }
 
     //push element into stack
@@ -43,11 +42,6 @@ class Stack{
             return "stack is empty";
         }
         return this.item[this.item.length-1];
-    }
-
-    //isFull
-    isFull(){
-
     }
 
     //size

@@ -75,7 +75,7 @@ CircularQueue.prototype.enQueue = function(element){
 
 CircularQueue.prototype.deQueue = function(){
     if(this.queue.length === 0) return false;
-    this.items.shift();
+    this.queue.shift();
     return true;
 } 
 
@@ -88,4 +88,27 @@ CircularQueue.prototype.rear = function(){
     if(this.queue.length === 0) return -1;
     return this.queue[this.queue.length-1];
 }
+
+CircularQueue.prototype.isEmpty = function(){
+    return this.queue.length === 0;
+}
+
+CircularQueue.prototype.isFull = function(){
+    return this.size = this.queue.length;
+}
+
+const circleQueue = new CircularQueue(5);
+circleQueue.enQueue(1);
+circleQueue.enQueue(2);
+circleQueue.enQueue(3);
+circleQueue.enQueue(4);
+circleQueue.enQueue(5);
+
+console.log(circleQueue.front());
+console.log(circleQueue.rear());
+
+
+console.log(circleQueue);
+
+
 

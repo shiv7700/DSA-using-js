@@ -177,7 +177,11 @@ function prime(num){
 const check = prime(13);
 check;
 
-// Question 12 : 
+// Question 12 : reverse a given number
+function reverse(n){
+    let reverse = 0;
+    let digit;
+}
 
 
 

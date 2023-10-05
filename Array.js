@@ -347,9 +347,6 @@ function merge3(arr1,arr2){
 const os3 = merge3([1,2,3],[4,5,6])
 os3;
 
-function merge4(arr1,arr2){
-  let result = arr1.push(arr2);
-}
 
 // copy for questions
 //Question 12 : count how many times every element in array occurs

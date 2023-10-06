@@ -28,7 +28,7 @@ function productOfArray(arr) {
 }
 
 const result2 = productOfArray([1, 2, 3, 4, 0]);
-console.log(result2)
+console.log(result2);
 
 //Question 3  : reverse array
 // [1,2,3,4,5] => [5,4,3,2,1]
@@ -42,7 +42,7 @@ function reverseArray(arr) {
 }
 
 const result3 = reverseArray([1, 2, 3, 4, 5]);
-console.log(result3)
+console.log(result3);
 
 //Question 4 : increase array element by two
 // [1,2,3,4,5] => [2,4,6,8,12]
@@ -56,7 +56,7 @@ function increaseByTwo(arr) {
 }
 
 const result4 = increaseByTwo([1, 2, 3, 4, 5, 6]);
-console.log(result4)
+console.log(result4);
 
 //Question 5 : largest element in array
 // [1,3,5,7,9] => largest = 9
@@ -68,7 +68,7 @@ function largestArrayWrong(arr) {
 }
 
 const worngWay = largestArray([1, 5, 3, 76, 54]);
-console.log(worngWay)
+console.log(worngWay);
 
 //correct way
 function largestArray(arr) {
@@ -81,7 +81,7 @@ function largestArray(arr) {
 }
 
 const result5 = largestArray([1, 2, 3, 10, 4, 5, 6]);
-console.log(result5)
+console.log(result5);
 
 //Question 6 : smallest element in array
 // [5,3,1,7] => smallest = 1
@@ -95,7 +95,7 @@ function smallestArray(arr) {
 }
 
 const result6 = smallestArray([1, 2, 3, 10, -1, 4, 5, 6]);
-console.log(result6)
+console.log(result6);
 
 //Question 7 : find an element in array
 // [10,20,30,40,50] => 20 at index 1
@@ -110,7 +110,7 @@ function arrayElement(arr, target) {
 }
 
 const result7 = arrayElement([1, 2, 3, 4, 5, 6], 5);
-console.log(result7)
+console.log(result7);
 
 //Question 8 : remove duplicate values from array
 // [1,2,3,1,2,3] => [1,2,3]
@@ -125,7 +125,7 @@ function removeDuplicateTwo(arr) {
 }
 
 const resultOne = removeDuplicateTwo(arr);
-console.log(resultOne)
+console.log(resultOne);
 
 //method two
 function removeDuplicate() {
@@ -147,7 +147,7 @@ function removeDuplicate() {
 }
 
 const result8 = removeDuplicate([1, 2, 3, 1, 2, 3, 1, 2, 3]);
-console.log(result8)
+console.log(result8);
 
 //Question 9 : second largest element in array
 // [10,20,30,40] => secondlargest = 30
@@ -161,7 +161,7 @@ function secondSmallestWrong(arr) {
 }
 
 const secondWrong = secondSmallestWrong([4, 6, 3, 8, 9, 1]);
-console.log(secondWrong)
+console.log(secondWrong);
 
 //correct way
 function secondLargest(arr) {
@@ -180,7 +180,7 @@ function secondLargest(arr) {
 }
 
 const secondCorrect = secondLargest([2, 5, 3, 7, 9, 9, 7, 6]);
-console.log(secondCorrect)
+console.log(secondCorrect);
 
 //Question 10 : second smallest element in array
 // [10,20,30,40] => secondSmallest = 20
@@ -202,7 +202,7 @@ function secondSmallest(arr) {
 }
 
 const smallest = secondSmallest([5, 4, 1, 7, 8, 9, 1, 4]);
-console.log(smallest)
+console.log(smallest);
 
 //Question 11 : count how many times every element in array occurs
 //frequency counter
@@ -221,7 +221,7 @@ function frequencyCounter(arr) {
 }
 
 const frequencyOne = frequencyCounter([1, 2, 3, 3, 2, 1]);
-console.log(frequencyOne)
+console.log(frequencyOne);
 
 //Question 12 : find missing element in array
 // [10,20,30,40] => no missing element
@@ -237,7 +237,7 @@ function missingNumber(arr) {
 }
 
 const missing = missingNumber([10, 20, 30, 40]);
-console.log(missing)
+console.log(missing);
 
 //Question 13 : product of array element except itself
 // [1,10,0,2] => [0,0,20,0]
@@ -262,7 +262,7 @@ function productExcept(arr) {
 }
 
 const prod1 = productExcept([1, 2, 3, 4, 5]);
-console.log(prod1)
+console.log(prod1);
 
 //Question 14 : check if two arrays are equal or not
 // [10,20,30,40] [10,20,30,40] => true
@@ -279,7 +279,7 @@ function equalArray(arr1, arr2) {
 }
 
 const equal = equalArray([10, 20, 30, 40], [10, 20, 30, 50]);
-console.log(equal)
+console.log(equal);
 
 //Question 15 : remove element from array at specific index
 //also all occurance of that element
@@ -295,7 +295,7 @@ function removeElement1(arr, element) {
 }
 
 const remove1 = removeElement1([4, 1, 2, 4, 3, 4, 5], 4);
-console.log(remove1)
+console.log(remove1);
 
 //correct way
 function removeElement(arr, element) {
@@ -314,39 +314,38 @@ const remove = removeElement([1, 2, 3, 4, 5], 3);
 console.log(remove);
 
 // Question 16 : merge two array into a new array
-// [1,2,3,4] 
+// [1,2,3,4]
 // [6,7,8,9]
 // => [1,2,3,4,6,7,8,9]
-function merge(arr1,arr2){
+function merge(arr1, arr2) {
   let result = [];
-  for(let i=0; i<arr1.length; i++){
-      result.push(arr1[i]);
+  for (let i = 0; i < arr1.length; i++) {
+    result.push(arr1[i]);
   }
-  
-  for(let i=0; i<arr2.length; i++){
-      result.push(arr2[i]);
+
+  for (let i = 0; i < arr2.length; i++) {
+    result.push(arr2[i]);
   }
 
   return result;
 }
 
-const os = merge([1,2,3],[4,5,6]);
+const os = merge([1, 2, 3], [4, 5, 6]);
 os;
 
-function merge1(arr1,arr2){
+function merge1(arr1, arr2) {
   return arr1.concat(arr2);
 }
 
-const os2 = merge1([1,2,3],[4,5,6]);
+const os2 = merge1([1, 2, 3], [4, 5, 6]);
 os2;
 
-function merge3(arr1,arr2){
-  return [...arr1,...arr2];
+function merge3(arr1, arr2) {
+  return [...arr1, ...arr2];
 }
 
-const os3 = merge3([1,2,3],[4,5,6])
+const os3 = merge3([1, 2, 3], [4, 5, 6]);
 os3;
-
 
 // copy for questions
 //Question 12 : count how many times every element in array occurs

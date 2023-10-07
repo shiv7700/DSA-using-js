@@ -146,7 +146,7 @@ function removeDuplicate() {
   return result;
 }
 
-const result8 = removeDuplicate([1, 2, 3, 1, 2, 3, 1, 2, 3]);
+const result8 = removeDuplicate([10, 1, 2, 3, 1, 2, 3, 1, 2, 3]);
 console.log(result8);
 
 //Question 9 : second largest element in array

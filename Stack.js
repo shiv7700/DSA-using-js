@@ -3,11 +3,10 @@
 //LIFO Principle of Stack
 //LIFO last in first out
 
-// push: Add an element to the end of the queue
-// pop: Remove an element from the end of the queue
-// IsEmpty: Check if the queue is empty
-// IsFull: Check if the queue is full
-// Peek: Get the value of the front of the queue without removing it
+// push: Add an element to the end of the stack
+// pop: Remove an element from the end of the stack
+// IsEmpty: Check if the stack is empty
+// Peek: Get the value of the front of the stack without removing it
 
 // [1,2,3,4,5] 1 is rear , 5 is front
 
@@ -53,7 +52,8 @@ class Stack {
 
   //print whole stack
   print() {
-    console.log(this.item.join(" "));
+    if (this.isEmpty()) return "stack is empty";
+    return this.item.join(" ");
   }
 }
 
@@ -77,7 +77,7 @@ console.log(oneStack.isEmpty());
 
 console.log(oneStack.size());
 
-oneStack.print();
+console.log(oneStack.print());
 
 console.log(oneStack);
 

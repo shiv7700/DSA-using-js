@@ -1,10 +1,15 @@
 // Queue
-//FIFO Principle of queue
+// FIFO Principle of queue
+// first in first out
 
-//front => starting part of queue
-//rear => ending part of queue
+//There are three types of queues known as circular, double-ended (dequeue) , and priority.
 
-//There are three types of queues known as circular, double-ended, and priority.
+// enqueue: add element to end of queue
+// dequeue: remove element from start of queue
+// isEmpty: check if queue is empty or not
+// front: value of element at start of queue
+// size: return total number of element in queue
+// print/display: print all elements in queue
 
 class Queue {
   constructor() {
@@ -44,66 +49,127 @@ class Queue {
 
   //print queue
   print() {
+    if (this.isEmpty()) return "queue is empty";
     console.log(this.items.join(" "));
   }
 }
 
-const inqueue = new Queue();
-inqueue.enqueue(10);
-inqueue.enqueue(20);
-inqueue.enqueue(30);
-inqueue.enqueue(40);
+const queueOne = new Queue();
+queueOne.enqueue(10);
+queueOne.enqueue(20);
+queueOne.enqueue(30);
+queueOne.enqueue(40);
 
-inqueue.dequeue();
-inqueue.dequeue();
+queueOne.dequeue();
+queueOne.dequeue();
 
-console.log(inqueue.print());
+console.log(queueOne.print());
 
 // Circular Queue Implementation
 // A Circular Queue is an extended version of a normal queue where the last element of the queue is connected to the first element of the queue forming a circle.
-const CircularQueue = function (k) {
-  this.queue = [];
-  this.size = k;
-};
+class circularQueue {
+  constructor(k) {
+    this.queue = [];
+    this.size = k;
+  }
 
-CircularQueue.prototype.enQueue = function (element) {
-  if (this.size === this.queue.length) return false;
-  this.queue.push(element);
-  return true;
-};
+  enqueue(element) {
+    if (this.size === this.queue.length) return false;
+    this.queue.push(element);
+    return true;
+  }
 
-CircularQueue.prototype.deQueue = function () {
-  if (this.queue.length === 0) return false;
-  this.queue.shift();
-  return true;
-};
+  dequeue() {
+    if (this.queue.length === 0) return false;
+    this.queue.shift();
+    return true;
+  }
 
-CircularQueue.prototype.front = function () {
-  if (this.queue.length === 0) return -1;
-  return this.queue[0];
-};
+  front() {
+    if (this.queue.length === 0) return -1;
+    return this.queue[0];
+  }
 
-CircularQueue.prototype.rear = function () {
-  if (this.queue.length === 0) return -1;
-  return this.queue[this.queue.length - 1];
-};
+  rear() {
+    if (this.queue.length === 0) return -1;
+    return this.queue[this.queue.length - 1];
+  }
 
-CircularQueue.prototype.isEmpty = function () {
-  return this.queue.length === 0;
-};
+  isEmpty() {
+    return this.queue.length === 0;
+  }
 
-CircularQueue.prototype.isFull = function () {
-  return (this.size = this.queue.length);
-};
+  isFull() {
+    return (this.size = this.queue.length);
+  }
+}
 
-const circleQueue = new CircularQueue(5);
-circleQueue.enQueue(1);
-circleQueue.enQueue(2);
-circleQueue.enQueue(3);
-circleQueue.enQueue(4);
-circleQueue.enQueue(5);
+const circle = new circularQueue();
 
-console.log(circleQueue.front());
-console.log(circleQueue.rear());
+// deque : similar to normal queue but elements can be added or removed from both ends
 
-console.log(circleQueue);
+class Deque {
+  constructor() {
+    this.deque = [];
+  }
+
+  addFront(element) {
+    this.deque.unshift(element);
+  }
+
+  addRear(element) {
+    this.deque.push(element);
+  }
+
+  removeFront() {
+    if (this.isEmpty()) return "deque is empty";
+    return this.deque.pop();
+  }
+
+  removeRear() {
+    if (this.isEmpty()) return "deque is empty";
+    return this.deque.shift();
+  }
+
+  front() {
+    if (this.isEmpty()) return "deque is empty";
+    return this.deque[0];
+  }
+
+  rear() {
+    if (this.isEmpty()) return "deque is empty";
+    return this.deque[this.deque.length - 1];
+  }
+
+  size() {
+    return this.deque.length;
+  }
+
+  isEmpty() {
+    return this.deque.length === 0;
+  }
+
+  print() {
+    if (this.isEmpty()) return "deque is empty";
+    return this.deque.join(" ");
+  }
+}
+
+const dequeue = new Deque();
+dequeue.addFront(10);
+dequeue.addFront(20);
+dequeue.addFront(5);
+dequeue.addRear(30);
+dequeue.addRear(40);
+dequeue.addRear(50);
+dequeue.addRear(60);
+
+dequeue.removeFront();
+dequeue.removeRear();
+
+console.log(dequeue.size());
+console.log(dequeue.isEmpty());
+console.log(dequeue.front());
+console.log(dequeue.rear());
+
+console.log(dequeue.print());

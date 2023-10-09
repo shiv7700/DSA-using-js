@@ -50,7 +50,12 @@ class Queue {
   //print queue
   print() {
     if (this.isEmpty()) return "queue is empty";
-    console.log(this.items.join(" "));
+    let queue = "";
+    for (let i = 0; i < this.size(); i++) {
+      queue = queue + this.items[i] + " ";
+    }
+    return queue;
+    // return this.items.join(" ");
   }
 }
 
@@ -59,6 +64,8 @@ queueOne.enqueue(10);
 queueOne.enqueue(20);
 queueOne.enqueue(30);
 queueOne.enqueue(40);
+
+console.log(queueOne.size());
 
 queueOne.dequeue();
 queueOne.dequeue();

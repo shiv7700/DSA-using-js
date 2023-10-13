@@ -109,9 +109,21 @@ class circularQueue {
   isFull() {
     return (this.size = this.queue.length);
   }
+
+  print() {
+    if (this.queue.length === 0) return "queue is empty";
+    return this.queue.join(" ");
+  }
 }
 
-const circle = new circularQueue();
+const circle = new circularQueue(5);
+circle.enqueue(10);
+circle.enqueue(50);
+circle.enqueue(30);
+circle.enqueue(20);
+circle.enqueue(60);
+
+console.log(circle.print());
 
 // deque : similar to normal queue but elements can be added or removed from both ends
 

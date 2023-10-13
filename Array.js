@@ -150,7 +150,7 @@ const result8 = removeDuplicate([10, 1, 2, 3, 1, 2, 3, 1, 2, 3]);
 console.log(result8);
 
 //Question 9 : second largest element in array
-// [10,20,30,40] => secondlargest = 30
+// [10,20,30,40] => secondLargest = 30
 // [10,20,30,40,40] => secondLargest = 30
 //wrong way
 function secondSmallestWrong(arr) {
@@ -346,6 +346,33 @@ function merge3(arr1, arr2) {
 
 const os3 = merge3([1, 2, 3], [4, 5, 6]);
 os3;
+
+function de(arr1, arr2) {
+  const result = [];
+  for (let i = 0; i < Math.max(arr1.length, arr2.length); i++) {
+    if (arr1[i] != undefined) result.push(arr1[i]);
+    if (arr2[i] != undefined) result.push(arr2[i]);
+  }
+  return result;
+}
+
+//Question 17 : (two sum) given a array and return indexof element that hit a target
+// [1,2,3,4,5] target = 9 => 3,4 becoz 4+5 = 9
+// [10,40,20,50] target = 70 => 2,3 becoz 20+50 = 70
+function twoSum(arr, target) {
+  let first = null;
+  let second = null;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        first = i;
+        second = j;
+        return { i, j };
+      }
+    }
+  }
+  return false;
+}
 
 // copy for questions
 //Question 12 : count how many times every element in array occurs

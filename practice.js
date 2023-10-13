@@ -27,3 +27,20 @@ function prod(arr) {
 }
 
 console.log(prod([1, 2, 3, 4, 5, 6]));
+
+function productFor(arr) {
+  let product = 1;
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    product = product * arr[i];
+    result.push(product);
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    result[i] = product / arr[i];
+  }
+
+  return result;
+}
+
+console.log(productFor([10, 3, 5, 6, 2]));
